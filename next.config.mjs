@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  swcMinify: true,
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
@@ -14,14 +13,12 @@ const nextConfig = {
   },
 };
 
-import withPWAInit from '@ducanh2912/next-pwa'
+import withPWAInit from '@ducanh2912/next-pwa';
 
 const withPWA = withPWAInit({
   dest: 'public',
   register: true,
   reloadOnOnline: true,
-  
-})
-
+});
 
 export default withPWA(nextConfig);
